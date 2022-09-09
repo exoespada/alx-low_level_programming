@@ -4,17 +4,21 @@
 /**
  * main - entry point
  *
- * Return: always 0 (success)
+ * Return: Always 0 (success)
  */
 int main(void)
 {
 	int d;
-	char low;
 
 	for (d = '0'; d <= '9'; d++)
-	putchar(d);
-	for (low = 'a'; low <= 'f'; low++)
-	putchar(low);
+	{
+		putchar(d);
+		if (d != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
 	putchar('\n');
 
 return (0);
