@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * description: the main function will print the string.
- * betyy style is a bitch.
+ * Description: main - prints string to stdout.
+ * Return: 0 if successful.
  */
 int main(void)
 {
