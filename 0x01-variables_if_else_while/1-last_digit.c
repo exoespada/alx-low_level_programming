@@ -21,6 +21,6 @@ int main(void)
 	else if (l == 0)
 		printf("%s %d is %d and is 0\n", str, n, l);
 	else if (l < 6)
-		printf("%s %d is %d amd is less than 6 and not 0\n", str, n, l);
+		printf("%s %d is %d and is less than 6 and not 0\n", str, n, l);
 return (0);
 }
