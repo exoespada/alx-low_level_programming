@@ -4,7 +4,7 @@
 
 /**
  * main - its output will print intergers.
- * Description: the main function of the programm will print will print intergers eith positive, zero, nagative.
+ * Description: the main function prints intergers
  * Return: 0
  */
 int main(void)
