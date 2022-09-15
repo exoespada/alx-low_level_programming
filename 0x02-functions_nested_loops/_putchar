@@ -1,14 +1,17 @@
 #include <unistd.h>
 
 /**
- *  _putchar - will print the putchar
- * the function will print putchar
- *
- *
- *Return: will be 0 on success
- *
- */
+*
+* _putchar  - prints the character c on the std ooutput
+*
+*
+*
+*return: on success 1
+*
+*on error return -1
+*
+*/
 int _putchar(char c)
 {
-	return(write(1, &c, 1));
+ return (write(1, &c, 1));
 }
