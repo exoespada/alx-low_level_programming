@@ -1,6 +1,6 @@
 /*
  * 4-puts.c
- * main - prints a string folloed by new line.
+ * main - main function prints a string folloed by new line.
  * Returns 0 after a successful run.
  * Description: this functions prints a string followed by a new line
  * Author: Peter Pierre Nzioki (Exoespada)
