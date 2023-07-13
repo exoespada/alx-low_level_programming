@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-int main(void)
+int main(void)/*4-puts.c prints exactly "Programming is like building a multilingual puzzle, followed by a new line. */
 {
 char word[] = "\"Programming is like building a multilingual puzzle";
 puts(word);
