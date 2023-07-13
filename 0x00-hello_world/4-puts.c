@@ -1,5 +1,7 @@
 /*
  * 4-puts.c
+ * main - prints a string folloed by new line.
+ * Returns 0 after a successful run.
  * Description: this functions prints a string followed by a new line
  * Author: Peter Pierre Nzioki (Exoespada)
  * Year: 2023
@@ -12,7 +14,8 @@
 
 #include <stdio.h>
 
-int main(void)/*4-puts.c prints exactly "Programming is like building a multilingual puzzle, followed by a new line. */
+/* Main function */
+int main(void)
 {
 char word[] = "\"Programming is like building a multilingual puzzle";
 puts(word);
