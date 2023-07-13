@@ -1,16 +1,9 @@
-/*
- * 4-puts.c
- * main - Main function of my project
- * Returns 0 after a successful run.
- * Description: this functions prints a string followed by a new line
- * Author: Peter Pierre Nzioki (Exoespada)
- * Year: 2023
- * License: MIT
- * Written for ALX software engineering program.
- *
- * Copyright (c) 2023 Peter Pierre Nzioki
- * All rights reserved.
- */
+/**
+*main - Main function of my project
+*
+*
+*Return: return 0 everytime
+*/
 
 #include <stdio.h>
 
