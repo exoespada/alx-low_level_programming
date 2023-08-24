@@ -7,40 +7,39 @@
  *
  *Return: NULL in case of failure
  *or address or the element
-*/
-
+ */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	char *dup;
-	int len;
-	list_t *new, *last;
+    int len = 0;
+    list_t *new_node;
+    list_t *last = *head;
 
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
-		return (NULL);
+    new_node = malloc(sizeof(list_t));
+    if (!new_node)
+        return NULL;
 
-	dup = strdup(str);
-	if (str == NULL)
-	{
-		free(new);
-		return (NULL);
-	}
+    new_node->str = strdup(str);
+    if (!new_node->str)
+    {
+        free(new_node);
+        return NULL;
+    }
 
-	for (len = 0; str[len];)
-		len++;
+    while (str[len])
+        len++;
 
-	new->str = dup;
-	new->len = len;
-	new->next = NULL;
+    new_node->len = len;
+    new_node->next = NULL;
 
-	if (*head == NULL)
-		*head = new;
-	else
-	{
-		last = *head;
-		while (last->next != NULL)
-			last = last->next;
-		last->next = new;
-	}
-	return (*head);
+    if (!last)
+        *head = new_node;
+    else
+    {
+        while (last->next)
+            last = last->next;
+        last->next = new_node;
+    }
+
+    return *head;
 }
+
