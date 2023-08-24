@@ -5,17 +5,13 @@
  *@h: pointer to the list
  *
  *Return: the number of elements
-*/
-
+ */
 size_t list_len(const list_t *h)
-	{
-		size_t elements = 0;
+{
+    size_t element_counter = 0;
 
-		while (h)
-		{
-			elements++;
-			h = h->next;
-		}
+    for (; h; h = h->next, element_counter++);
 
-		return (elements);
-	}
+    return element_counter;
+}
+
