@@ -1,57 +1,40 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - deletes a node at an index
- * @head: pointer to the head of the list
- * @index: index of the node to be deleted
- * Return: 1 if succeeded, -1 if failed
+ * delete_nodeint_at_index - Deletes the node at a given
+ *                           index of a listint_t list.
+ * @head: A pointer to the address of the
+ *        head of the listint_t list.
+ * @index: The index of the node to be deleted - indices start at 0.
+ *
+ * Return: On success - 1.
+ *         On failure - -1.
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-    listint_t *current = *head;
-    listint_t *shift_node;
+	listint_t *tmp, *copy = *head;
+	unsigned int node;
 
-    // Empty list or invalid index
-    if (!current || index >= listint_len(*head))
-        return (-1);
+	if (copy == NULL)
+		return (-1);
 
-    // Delete head node
-    if (index == 0)
-    {
-        *head = current->next;
-        free(current);
-        return (1);
-    }
+	if (index == 0)
+	{
+		*head = (*head)->next;
+		free(copy);
+		return (1);
+	}
 
-    // Traverse list till node before the target node
-    for (unsigned int i = 0; i < index - 1; i++)
-    {
-        if (!current->next)
-            return (-1);  // Reached end before reaching desired index
-        current = current->next;
-    }
+	for (node = 0; node < (index - 1); node++)
+	{
+		if (copy->next == NULL)
+			return (-1);
 
-    // Delete the node
-    shift_node = current->next;
-    current->next = shift_node->next;
-    free(shift_node);
+		copy = copy->next;
+	}
 
-    return (1);
+	tmp = copy->next;
+	copy->next = tmp->next;
+	free(tmp);
+	return (1);
 }
-
-/**
- * listint_len - counts the number of nodes in a linked list
- * @h: head of the list
- * Return: the number of elements
- */
-size_t listint_len(const listint_t *h)
-{
-    size_t counter = 0;
-    while (h)
-    {
-        counter++;
-        h = h->next;
-    }
-    return counter;
-}
-
